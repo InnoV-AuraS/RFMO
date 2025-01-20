@@ -17,6 +17,16 @@ function hideMenu() {
 hamburger.addEventListener('click', showMenu); // Show menu on hamburger click
 closeButton.addEventListener('click', hideMenu); // Hide menu on close button click
 
+
+
+
+document.body.style.backgroundImage = 'url("https://vscode.dev/github/InnoV-AuraS/RFMO/blob/Home_Page/SVGs/backgroung.jpg")';
+document.body.style.backgroundSize = 'cover';
+document.body.style.backgroundPosition = 'center';
+
+
+
+
 //Support Page Faqs
 document.addEventListener('DOMContentLoaded', () => {
     const faqs = document.querySelectorAll('.faq h3');

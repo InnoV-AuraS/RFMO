@@ -3,22 +3,60 @@
     padding: 0px;
 }
 
+.border{
+background-color: #0b19e6;
+width: 100%;
+height: 50px;
+box-shadow: 0px 4px 10px #ffffff;
+}
+
+.background{
+    position: absolute;
+    background-size: 120% auto;
+}
+
+.background img {
+    background-position: center center;
+    background-repeat:repeat;
+    height: auto;
+    width: 100vw;
+    position: relative;
+    background-size: 100% auto; /* Default size */
+    transition: background-size 0.5s ease-in-out; /* Smooth transition */
+}
+
 header{
     display: flex;
-    background-color: rgb(38, 38, 180);
-    height: 45px;
+    height: auto;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content:space-evenly;
     position: relative;
+    box-shadow: 1px 1px 20px #000000;
+}
+
+.nav-elements{
+    position: relative;
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+    gap:40px;
+    align-items: center;
+
+}
+.logo img{
+    width: 100px;
+    margin-top: 10px;
 }
 
 .hamburger img {
-    margin-left: 20px;
-    width: 35px;
     filter: invert();
+    margin-left: 15px;
+    margin-top: 3px;
+    width: 40px;
     opacity: 80%;
     transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for transform and opacity */
+    display: none;
 }
 
 .hamburger img:hover {
@@ -27,10 +65,11 @@ header{
     cursor: pointer;
 }
 
-
 .left-menu{
     width: 350px;
-    background-color: rgba(0, 0, 0, 0.468);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 20px #000000;
+    border-radius: 10px;
     height: 99vh;
     position: absolute;
     top:3px;
@@ -39,17 +78,28 @@ header{
 
 .left-menu {
     transform: translateX(-100%);
+    background-image: linear-gradient(135deg, rgba(23, 66, 221, 0.9), rgba(35, 52, 162, 0.85), rgba(0, 0, 0, 0.9));
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.9), 0 4px 10px rgba(0, 0, 0, 0.6); /* Enhanced glow and outer shadow */
+    filter: brightness(0.9) contrast(1.2); /* Adjusted brightness and contrast for a sleek look */
+}
+
+.left-menu ul li {
+    display: none; /* Initially hide all items in the dashboard */
 }
 
 .dashboard{
 position: absolute;
 font-size: 35px;
 font-weight:600;
-color: #eae6e6;
+color: #ffffff;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 padding: 1px;
 padding-left: 10px;
-background-color: black;
+background-image: linear-gradient(rgb(41, 54, 99), rgb(0, 0, 0));
+
 width: 339px;
 height: 50px;
 border-radius: 5px;
@@ -115,6 +165,7 @@ nav ul li a {
     color: rgb(255, 255, 255);
     opacity: 80%;
     display: inline-block; /* Ensures the link takes up only its content space */
+    font-weight: 500;
     padding: 10px 20px;
     transition: all 0.3s ease;
     border-radius: 5px;
@@ -129,7 +180,7 @@ nav ul li a:hover {
 
 
 .admin {
-    background-color: rgba(25, 196, 19, 0.779);
+    background-color: rgba(75, 237, 70, 0.779);
     color: #eae6e6;
     padding-top: 2px;
     border-radius: 10px;
@@ -137,7 +188,7 @@ nav ul li a:hover {
     height: 35px;
     margin-right: 8px;
     margin-left: 5px;
-    opacity: 80%;
+    opacity: 90%;
     transition: all 0.3s ease;
     font-size: 14px;
     display: flex;
@@ -158,6 +209,81 @@ nav ul li a:hover {
     opacity: 100%; /* Ensure full opacity on hover */
 }
 
-    
+/* Responsive Behavior: Disappearing Items */
+@media (max-width: 1150px) {
+    nav ul li:nth-child(5) {
+        display: none; /* Hide the 7th item (LOGIN) */
+    }
 
+    .hamburger img{
+        display: block;
+    }
+
+    .left-menu ul li:nth-child(5) {
+        display: block; /* Show CAMPUS LIFE */
+    }
+}
+
+@media (max-width: 1100px) {
+    nav ul li:nth-child(6) {
+        display: none; /* Hide the 6th item (DOWNLOADS) */
+    }
+
+    .left-menu ul li:nth-child(6) {
+        display: block; /* Show DOWNLOADS */
+    }
+}
+
+@media (max-width: 930px) {
+    nav ul li:nth-child(4) {
+        display: none; /* Hide the 5th item (CAMPUS LIFE) */
+    }
+
+    .left-menu ul li:nth-child(4) {
+        display: block; /* Show SUPPORT */
+    }
+}
+
+@media (max-width: 800px) {
+    nav ul li:nth-child(2) {
+        display: none; /* Hide the 4th item (SUPPORT) */
+    }
+
+    .left-menu ul li:nth-child(2) {
+        display: block; /* Show RESEARCH */
+    }
+}
+
+@media (max-width: 680px) {
+    nav ul li:nth-child(3) {
+        display: none; /* Hide the 3rd item (RFMO) */
+    }
+
+    .left-menu ul li:nth-child(3) {
+        display: block; /* Show RFMO */
+    }
+}
+
+@media (max-width: 560px) {
+    .admin{
+        display: none;
+    }
+
+    .left-menu .admin {
+        display: block; /* Show RFMO */
+    }
+}
+
+@media (max-width: 400px) {
+    nav ul li:nth-child(1) {
+        display: none; /* Hide the 1st item (HOME) */
+    }
+    .logo img{
+        margin-left: 35px;
+    }
+
+    .left-menu ul li:nth-child(1) {
+        display: block; /* Show HOME */
+    }
+}
     
