@@ -1,3 +1,8 @@
+
+
+
+
+
 // Get references to elements
 const hamburger = document.querySelector('.hamburger img'); // Hamburger icon
 const leftMenu = document.querySelector('.left-menu'); // Dashboard menu
@@ -22,8 +27,7 @@ closeButton.addEventListener('click', hideMenu); // Hide menu on close button cl
 
 
 
-
-
+//Background Of Website
 const images = [
     "SVGs/background.jpg",
     "SVGs/background4.jpg",
@@ -65,8 +69,6 @@ updateBackgroundImage();
 
 
 
-
-
 //Support Page Faqs
 document.addEventListener('DOMContentLoaded', () => {
     const faqs = document.querySelectorAll('.faq h3');
@@ -77,6 +79,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-
