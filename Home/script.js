@@ -1,8 +1,3 @@
-
-
-
-
-
 // Get references to elements
 const hamburger = document.querySelector('.hamburger img'); // Hamburger icon
 const leftMenu = document.querySelector('.left-menu'); // Dashboard menu
@@ -24,14 +19,9 @@ closeButton.addEventListener('click', hideMenu); // Hide menu on close button cl
 
 
 
-
-
-
 //Background Of Website
 const images = [
     "SVGs/background.jpg",
-    "SVGs/background4.jpg",
-    "SVGs/background5.jpg",
 ];
 
 let currentIndex = 0;
