@@ -1,3 +1,8 @@
+
+
+
+
+
 // Get references to elements
 const hamburger = document.querySelector('.hamburger img'); // Hamburger icon
 const leftMenu = document.querySelector('.left-menu'); // Dashboard menu
@@ -20,9 +25,46 @@ closeButton.addEventListener('click', hideMenu); // Hide menu on close button cl
 
 
 
-document.body.style.backgroundImage = 'url("https://vscode.dev/github/InnoV-AuraS/RFMO/blob/Home_Page/SVGs/backgroung.jpg")';
-document.body.style.backgroundSize = 'cover';
-document.body.style.backgroundPosition = 'center';
+
+
+//Background Of Website
+const images = [
+    "SVGs/background.jpg",
+    "SVGs/background4.jpg",
+    "SVGs/background5.jpg",
+];
+
+let currentIndex = 0;
+
+const imageContainer = document.querySelector('.image');
+const leftArrow = document.querySelector('.left-arrow');
+const rightArrow = document.querySelector('.right-arrow');
+
+// Function to update the background image
+function updateBackgroundImage() {
+    imageContainer.style.backgroundImage = `url(${images[currentIndex]})`;
+}
+
+// Event listeners for arrows
+leftArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back
+    updateBackgroundImage();
+});
+
+rightArrow.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length; // Loop forward
+    updateBackgroundImage();
+});
+
+// Auto-change background every 5 seconds (optional)
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateBackgroundImage();
+}, 5000);
+
+// Initialize the first image
+updateBackgroundImage();
+
 
 
 
@@ -37,6 +79,3 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
-
-
