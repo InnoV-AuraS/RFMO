@@ -4,11 +4,8 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET,POST,OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type,Accept");
 
-$servername="localhost";
-$username="root";
-$password="snehasis932005";
-$dbname="rfmo_database";
 $flag=false;
+require '../db_config.php';
 $data=[];
 
 try{

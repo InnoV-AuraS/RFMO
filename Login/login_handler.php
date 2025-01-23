@@ -1,10 +1,7 @@
 <?php
 function validate($type,$id,$password){
-    $servername="localhost";
-    $username="root";
-    $password="snehasis932005";
-    $dbname="rfmo_database";
     $flag=false;
+    require '../db_config.php';
 
     try{
     $conn=new mysqli($servername,$username,$password,$dbname);
