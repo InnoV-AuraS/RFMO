@@ -4,20 +4,30 @@
 }
 
 .border {
-    background-image: linear-gradient(135deg, rgb(23, 66, 221), rgba(35, 52, 162, 0.85), rgba(0, 0, 0, 0.9));
-    background-color: #0b19e6;
+    background-image: linear-gradient(135deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.9));
+    background-color: #ffffff;
     width: 100%;
     height: 50px;
-    box-shadow: 1px 5px 10px #d0d0d06e;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typing{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 30px;
 }
 
 /* Background image container */
 .image {
     background-position: center center;
     background-repeat: no-repeat;
-    height: 105vh;
+    height: 110vh;
     position: relative;
-    background-size: max(100vw, 1350px);
+    background-size: max(100vw, );
+    box-shadow: 3px 5px 20px 10px #000000;
 }
 
 /* Arrow styles */
@@ -61,31 +71,76 @@
 
 header {
     display: flex;
-    height: auto;
+    height: 100px;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+    top: 0;
     position: relative;
-    box-shadow: 1px 1px 20px #000000;
+    z-index: 1000; /* Ensures it stays above other elements */
+    background-color: transparent; /* Transparent initially */
+    transition: background-color 1s ease, transform 1s ease; /* Smooth transition */
+    box-shadow: 1px 5px 10px rgb(0, 0, 0); /* Add shadow */
+  }
+
+header.sticky{
+padding: 1px;
+background-color: white;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+position: sticky;
+top: 0;
+height: 70px;
 }
 
-.nav-elements {
-    position: relative;
+
+header.sticky .nav-elements ul li a {
+    background-color: #9393936d;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    opacity: 100%;
+    display: inline-block;
+    /* Ensures the link takes up only its content space */
+    font-weight: 700;
+    padding: 8px 20px;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    transform-origin: center;
+    /* Scale from the center */
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+.nav-elements .logo img {
+    height: 100px; /* Initial size */
+    width: auto; /* Maintain aspect ratio */
+    transition: height 1s ease, width 1s ease; /* Smooth resizing effect */
+  }
+  
+  /* Resize when Header Becomes Sticky */
+  header.sticky .nav-elements .logo img {
+    height: 70px; /* Reduced size when sticky */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 20px;
+  }
+  .nav-elements {
     display: flex;
     max-width: 100%;
     justify-content: space-between;
     gap: 40px;
     align-items: center;
-
-}
-
+  }
+  
+  .nav-elements a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
 .logo img {
     width: 100px;
-    padding: 2px;
     margin-top: 3.5px;
-    box-shadow: -1px 1px 1px 1px #000000;
-    border-radius: 20px;
-    background-color: #ffffffd4;
+    filter: drop-shadow(0.5px 1px 2px white);
 }
 
 .hamburger img {
@@ -104,6 +159,10 @@ header {
     transform: scale(1.1);
     /* Slightly enlarge the icon without affecting layout */
     cursor: pointer;
+}
+
+.login:hover{
+    background-color: #0b49e6;
 }
 
 .left-menu {
@@ -297,13 +356,15 @@ nav ul li {
     /* For positioning the dividers */
 }
 
-nav ul li:first-child {
+/*
+
+   nav ul li:first-child {
     border-left: 0.1px solid rgba(255, 255, 255, 0.6);
     padding-left: 2px;
     /* Add space between the divider and the content */
 }
 
-nav ul li:not(:last-child):after {
+    nav ul li:not(:last-child):after {
     content: '';
     position: absolute;
     right: -4px;
@@ -314,16 +375,18 @@ nav ul li:not(:last-child):after {
     /* Width of the divider */
     background-color: rgba(255, 255, 255, 0.6);
     /* Divider color */
-}
+    }
+
 
 nav ul li a {
+    background-color: #ffffffd3;
     text-decoration: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(255, 255, 255);
-    opacity: 80%;
+    color: rgb(0, 0, 0);
+    opacity: 90%;
     display: inline-block;
     /* Ensures the link takes up only its content space */
-    font-weight: 500;
+    font-weight: 700;
     padding: 10px 20px;
     transition: all 0.3s ease;
     border-radius: 5px;
@@ -334,6 +397,7 @@ nav ul li a {
 
 nav ul li a:hover {
     opacity: 100%;
+    color: white;
     background-color: rgba(0, 0, 0, 0.493);
     /* Highlight the entire space on hover */
     transform: scale(1.1);
@@ -383,6 +447,23 @@ nav ul li a:hover {
     opacity: 100%;
     /* Ensure full opacity on hover */
 }
+
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 columns */
+    grid-template-rows: repeat(4, auto); /* 2 rows */
+    gap: 20px; /* Spacing between grid items */
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .footer div {
+    background-color: #444; /* Individual item background for visibility */
+    padding: 10px;
+    border-radius: 5px;
+  }
 
 /* Responsive Behavior: Disappearing Items */
 @media (max-width: 1150px) {
@@ -435,6 +516,10 @@ nav ul li a:hover {
         display: block;
         /* Show RESEARCH */
     }
+
+    .footer {
+        grid-template-columns: 1fr 1fr; /* Reduce to 2 columns for smaller screens */
+      }
 }
 
 @media (max-width: 680px) {
@@ -459,6 +544,10 @@ nav ul li a:hover {
         display: block;
         /* Show RFMO */
     }
+
+    .footer {
+        grid-template-columns: 1fr; /* Stacks items vertically on very small screens */
+      }
 }
 
 @media (max-width: 400px) {

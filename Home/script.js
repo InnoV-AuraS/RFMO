@@ -1,3 +1,15 @@
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) { // Adjust pixel threshold
+    header.classList.remove('transparent');
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+    header.classList.add('transparent');
+  }
+});
+
 // Get references to elements
 const hamburger = document.querySelector('.hamburger img'); // Hamburger icon
 const leftMenu = document.querySelector('.left-menu'); // Dashboard menu
@@ -55,9 +67,11 @@ setInterval(() => {
 // Initialize the first image
 updateBackgroundImage();
 
-
-
-
+window.addEventListener("scroll", function () {
+    var header = document.querySelector("header");
+    var logo = document.querySelector(".logo");
+    header.classList.toggle("sticky", window.scrollY > 20);
+  });
 
 //Support Page Faqs
 document.addEventListener('DOMContentLoaded', () => {
@@ -69,3 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+
