@@ -111,6 +111,11 @@ setInterval(() => {
 updateBackgroundImage();
 
 
+
+
+
+
+
 let lastKnownScrollY = 0;
 let ticking = false;
 
@@ -145,17 +150,42 @@ window.addEventListener("scroll", () => {
 
 
 
-//Support Page Faqs
-document.addEventListener('DOMContentLoaded', () => {
-    const faqs = document.querySelectorAll('.faq h3');
-    faqs.forEach(faq => {
-        faq.addEventListener('click', () => {
-            const content = faq.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
+
+
+
+
+const bulb = document.getElementById("bulb");
+const links = document.getElementById("linkItems");
+const linkItems = links.querySelectorAll("a");
+let expanded = false;
+
+bulb.addEventListener("click", () => {
+    expanded = !expanded;
+
+    if (expanded) {
+        links.style.pointerEvents = "auto"; // Enable interaction
+    } else {
+        links.style.pointerEvents = "none"; // Disable interaction
+    }
+
+    linkItems.forEach((link, index) => {
+        const angle = parseInt(link.dataset.angle, 10);
+        setTimeout(() => {
+            if (expanded) {
+                const radius = 150; // Distance from center
+                const x = radius * Math.cos((angle * Math.PI) / 180);
+                const y = radius * Math.sin((angle * Math.PI) / 180);
+                link.style.opacity = "1";
+                link.style.transform = `translate(${x}px, ${y}px)`;
+                link.classList.add("visible");
+            } else {
+                link.style.opacity = "0";
+                link.style.transform = `translate(0, 0)`;
+                link.classList.remove("visible");
+            }
+        }, index * 200); // Delay for staggered animation
     });
 });
-
 
 
 

@@ -522,6 +522,7 @@ nav ul li a:hover {
     height: 100vh; /* Full viewport height to center the logo */
     width: 100%; /* Full width to ensure responsiveness */
     position: absolute; /* Ensures proper alignment */
+    z-index: 5;
 }
 
 .links p{
@@ -529,22 +530,25 @@ nav ul li a:hover {
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 1.1rem;
     font-weight: 600;
     background-color: #5a5a5a40;
     border-radius: 20px;
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border:2px solid white
+    border:2px solid white;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: -1px 4px 3px 4px rgba(0, 0, 0, 0.7);
 }
 
 .links img{
-    max-width: 20vw; /* Set maximum width as 20% of viewport width */
-    max-height: 20vh; /* Set maximum height as 20% of viewport height */
+    max-width: 13vw; /* Set maximum width as 20% of viewport width */
+    max-height: 13vh; /* Set maximum height as 20% of viewport height */
     width: auto; /* Maintain aspect ratio */
     height: auto; /* Maintain aspect ratio */
     object-fit: contain; /* Ensures the image fits properly */
+    filter: brightness(5);
 }
 
 .links :hover{
@@ -558,6 +562,10 @@ nav ul li a:hover {
     background-color:rgba(220, 220, 220, 0) ;
 }
 
+.links p:hover{
+transform: scale(1.1);
+}
+
 .footer {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
@@ -567,6 +575,7 @@ nav ul li a:hover {
     color: #fff;
     padding: 20px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .footer div {
@@ -574,6 +583,55 @@ nav ul li a:hover {
     padding: 10px;
     border-radius: 5px;
 }
+
+.link-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.link-items a {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none; /* Disable clicks when hidden */
+    transition: transform 0.5s ease, opacity 0.5s ease, width 0.5s ease, height 0.5s ease;
+    border: 2px solid black;
+    background-color: rgba(99, 99, 99, 0.366);
+    border-radius: 10px;
+    padding: 8px;
+
+  }
+  
+  .link-items a.visible {
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Allow text width when visible */
+    height: 18px;
+    pointer-events: auto; /* Enable clicks when visible */
+    box-shadow: -1px 2px 1px 1px rgba(0, 0, 0, 0.332);
+    transition: all 0.3s ease;
+  }
+
+  .link-items a.visible:hover {
+    background-color: #0000002b;
+    color: #45e02d;
+    width: 120px;
+    height: 30px;
+    box-shadow: -1px 4px 3px 1px rgb(0, 0, 0);
+    font-size: 1.2rem;
+  }
 
   /* Customize the scrollbar for WebKit browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
@@ -657,10 +715,6 @@ nav ul li a:hover {
         margin-top: -20px;
     }
 
-    .links p{
-        font-size: 22px;
-    }
-
     .links img{
         height: 12vw;
     }
@@ -699,10 +753,6 @@ nav ul li a:hover {
 
           .links{
             margin-top: -80px;
-        }
-    
-        .links p{
-            font-size: 20px;
         }
     
         .links img{
@@ -761,10 +811,6 @@ nav ul li a:hover {
             margin-top: -100px;
         }
     
-        .links p{
-            font-size: 15px;
-        }
-    
         .links img{
             height: 14vw;
         }
@@ -775,10 +821,6 @@ nav ul li a:hover {
     .nav-elements .logo img {
         height: 90px;
         margin-left: 6px;
-    }
-
-    .logo p{
-        font-size: 15px;
     }
 
     .nav-elements {
@@ -804,17 +846,20 @@ nav ul li a:hover {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
     .links{
-        margin-top: -200px;
-    }
-
-    .links p{
-        font-size: 10px;
+        margin-top: -250px;
     }
 
     .links img{
-        height: 10vw;
+        height: 12vw;
     }
+
+    .link-items a.visible {
+        opacity: 1;
+        width: 80px; /* Allow text width when visible */
+        height: 10px;
+        pointer-events: auto; /* Enable clicks when visible */
+      }
 }
 
