@@ -31,9 +31,52 @@ closeButton.addEventListener('click', hideMenu); // Hide menu on close button cl
 
 
 
+
+
+
+// Array of lines to display in the slider
+const lines = [
+    "ANNOUNCEMENTS - JIS EDUCATION INITIATIVES",
+    "JIS GROUP OF EDUCATION AND INITIATIVES",
+    "WELCOME TO JIS EDUCATION"
+];
+
+let Index = 0; // Tracks the current line index
+const textElement = document.getElementById("slider-text");
+
+// Function to show the next text line
+function showText() {
+    // Fade out the current text
+    textElement.style.opacity = "0";
+
+    // Wait for the fade-out transition (1 second)
+    setTimeout(() => {
+        // Update the text content
+        textElement.textContent = lines[Index];
+
+        // Fade in the new text
+        textElement.style.opacity = "1";
+
+        // Move to the next line (loop back to the first line if at the end)
+        Index = (Index + 1) % lines.length;
+    }, 1000); // Matches the CSS transition duration
+}
+
+// Start the slider with an interval
+setInterval(showText, 5000); // Change text every 3 seconds
+
+// Initialize the first text immediately
+showText();
+
+
+
+
+
+
 //Background Of Website
 const images = [
-    "SVGs/background.jpg",
+
+    "SVGs/background.png"
 ];
 
 let currentIndex = 0;
@@ -67,22 +110,94 @@ setInterval(() => {
 // Initialize the first image
 updateBackgroundImage();
 
-window.addEventListener("scroll", function () {
-    var header = document.querySelector("header");
-    var logo = document.querySelector(".logo");
-    header.classList.toggle("sticky", window.scrollY > 20);
-  });
 
-//Support Page Faqs
-document.addEventListener('DOMContentLoaded', () => {
-    const faqs = document.querySelectorAll('.faq h3');
-    faqs.forEach(faq => {
-        faq.addEventListener('click', () => {
-            const content = faq.nextElementSibling;
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        });
+
+
+
+
+
+let lastKnownScrollY = 0;
+let ticking = false;
+
+window.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+  const navBar = document.querySelector(".nav-elements"); // Adjust selector for your nav bar
+  const navBarHeight = navBar.offsetHeight; // Get nav bar height
+  const currentScrollY = window.scrollY;
+
+  if (!ticking) {
+    window.requestAnimationFrame(() => {
+      if (currentScrollY > navBarHeight + 100) { // Scrolling down beyond nav bar height
+        if (currentScrollY < lastKnownScrollY) {
+          // User is scrolling up
+          header.classList.add("sticky");
+        } else {
+          // User is scrolling down
+          header.classList.remove("sticky");
+        }
+      } else {
+        // Near the top of the page
+        header.classList.remove("sticky");
+      }
+
+      lastKnownScrollY = currentScrollY; // Update the last known scroll position
+      ticking = false;
+    });
+    ticking = true;
+  }
+});
+
+
+
+
+
+
+
+
+const bulb = document.getElementById("bulb");
+const links = document.getElementById("linkItems");
+const linkItems = links.querySelectorAll("a");
+let expanded = false;
+
+bulb.addEventListener("click", () => {
+    expanded = !expanded;
+
+    if (expanded) {
+        links.style.pointerEvents = "auto"; // Enable interaction
+    } else {
+        links.style.pointerEvents = "none"; // Disable interaction
+    }
+
+    linkItems.forEach((link, index) => {
+        const angle = parseInt(link.dataset.angle, 10);
+        setTimeout(() => {
+            if (expanded) {
+                const radius = 150; // Distance from center
+                const x = radius * Math.cos((angle * Math.PI) / 180);
+                const y = radius * Math.sin((angle * Math.PI) / 180);
+                link.style.opacity = "1";
+                link.style.transform = `translate(${x}px, ${y}px)`;
+                link.classList.add("visible");
+            } else {
+                link.style.opacity = "0";
+                link.style.transform = `translate(0, 0)`;
+                link.classList.remove("visible");
+            }
+        }, index * 200); // Delay for staggered animation
     });
 });
 
 
 
+
+const clickSound = new Audio('Sounds/sound.wav');
+clickSound.volume = 0.5; 
+
+document.addEventListener('click', () => {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  });
+
+clickSound.addEventListener('ended', () => {
+    // Sound completed
+  });
