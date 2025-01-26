@@ -1,75 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff44;
-            color: #333;
-        }
-        header {
-            background-color: #174ec4;
-            color: white;
-            text-align: center;
-            padding: 2px;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        .section {
-            margin-bottom: 2rem;
-        }
-        h2 {
-            color: #1d2be6;
-        }
-        .faq {
-            margin: 1rem 0;
-        }
-        .faq h3 {
-            margin: 0;
-            cursor: pointer;
-            background-color: #eee;
-            padding: 0.5rem;
-            border-radius: 5px;
-        }
-        .faq p {
-            display: none;
-            margin: 0;
-            padding: 0.5rem;
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form {
-            background-color: #fff;
-            padding: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form input, form textarea, form button {
-            width: 100%;
-            margin-bottom: 1rem;
-            padding: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form button {
-            background-color: #4c72af;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        .contact-info {
-            margin-top: 1rem;
-        }
-        .chatbot {
-            margin-top: 2rem;
-            text-align: center;
-        }
-        .chatbot iframe {
-            border: none;
-            width: 100%;
-            max-width: 400px;
-            height: 500px;
-        }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+header {
+    top:0;
+    position: sticky;
+    text-align: center;
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
+    transition: all ease-in-out 0.3s;
+    box-shadow: 1px 1px 7px 2px rgb(0, 0, 0);
+    z-index: 1000;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5em;
+    transition: all ease-in-out 0.3s;
+}
+
+header p {
+    font-size: 1.2em;
+    transition: all ease-in-out 0.3s;
+}
+
+.dashboard{
+    font-size: 30px;
+    padding: 20px;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+#menuToggle {
+    display: none;
+    position: fixed;
+    top: 5px;
+    left: 15px;
+    font-size: 2em;
+    cursor: pointer;
+    z-index: 1000;
+    color: #ffffff;
+    width: 50px;
+    height: 100;
+}
+
+#dashboard {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    margin-top: 2px;
+    transition: transform 0.3s ease;
+    z-index: 999;
+    border: 2px solid black;
+    box-shadow: -1px 3px 1px 2px rgb(0, 0, 0);
+}
+
+#dashboard a {
+    color: white;
+    padding: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+#dashboard a:hover {
+    background-color: #575757;
+}
+
+#dashboard a i {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.container {
+    margin-left: 300px;
+    max-width: calc(100% - 300px);
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+h2 {
+    margin-bottom: 15px;
+    color: #007BFF;
+}
+
+.faq-btn {
+    background-color: #f1f1f1;
+    color: #333;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-btn:hover {
+    background-color: #eaeaea;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-left: 4px solid #007BFF;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#support-form label,
+#other-question-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#support-form input,
+#support-form textarea,
+#support-form button,
+#other-question-form textarea,
+#other-question-form button {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#support-form button,
+#other-question-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#support-form button:hover,
+#other-question-form button:hover {
+    background-color: #0056b3;
+}
+
+#contact-info p,
+#contact-info a {
+    font-size: 1.1em;
+}
+
+#contact-info a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#contact-info a:hover {
+    text-decoration: underline;
+}
+
+.chatbot iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    #menuToggle {
+        display: block;
+    }
+
+    #dashboard {
+        transform: translateX(-300px);
+    }
+
+    #dashboard.open {
+        transform: translateX(0);
+    }
+
+    .container {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+    }
+    
+    header p {
+        font-size: 1em;
+    }
+    
+}

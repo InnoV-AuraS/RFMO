@@ -3,30 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="Style Sheets/login.css" rel="stylesheet" tupe="text/css">
+    <link href="login.css" rel="stylesheet" tupe="text/css">
     <title>Document</title>
 </head>
+</head>
 <body>
-    <div>
-        <div id="actionbar">
-            <p>Login</p>
-            <button>Sign Up</button>
-        </div><br/>
-        <form id="container" action="http://localhost:3000/RFMO/login_handler.php" method="post">
-            <label for="type">Choose your Authentication:</label>
-            <select name="type" required>
-                <option value="">Choose Type</option>
-                <option value="principal">Principal</option>
-                <option value="faculty">Faculty</option>
-                <option value="admin">Admin</option>
-            </select><br/><br/>
-            <label for="id">ID:</label>
-            <input  type="text" name="id" placeholder="enter user id" required><br/><br/>
-            <label for="password:">Password</label>
-            <input type="password" name="password" placeholder="enter password" required><br/><br/>
-            <input type="submit" value="Log in"><br/><br/>
-            <a href="forgot_password.php">Forgot Your Password?</a><br/>
-        </form>
+    <div id="navbar">
+        <span>Login & Registration Page</span>
+        <span id="hamburger">&#9776;</span>
     </div>
-</body>
+
+    <div class="main">
+        <div id="left-pane">
+            <p>DASHBOARD</p>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Help</li>
+            </ul>
+        </div>
+
+        <div id="login-form">
+            <form id="container" action="http://localhost:3000/RFMO/login_handler.php" method="post">
+                <label for="type">Choose your Authentication:</label>
+                <select name="type" required>
+                    <option value="">Choose Type</option>
+                    <option value="principal">Principal</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="admin">Admin</option>
+                </select><br/><br/>
+
+                <label for="id">ID:</label>
+                <input type="text" name="id" placeholder="Enter user ID" required><br/><br/>
+
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Enter password" required><br/><br/>
+
+                <input type="submit" value="Log in"><br/><br/>
+
+                <a href="forgot_password.php">Forgot Your Password?</a>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 Your Company. All rights reserved. Hot and happening footer here!
+    </footer>
+
+    <script src="login-script.js"></script>
 </html>
