@@ -1,222 +1,190 @@
 * {
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    transition: all 0.3s ease;
-    margin: 0%;
-    padding: 0%;
-}
-
-html, body {
-    height: 100%;
     margin: 0;
+    padding: 0;
 }
 
-.container {
+body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
 }
 
-.content {
+#navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 2em;
+    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0);
+    z-index: 4;
+    position: sticky;
+    top: 0;
+}
+
+#navbar button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navbar button:hover {
+    background-color: #569063;
+}
+
+.main {
+    display: flex;
     flex: 1;
 }
 
-.footer {
-    margin-top: auto;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
-    padding: 12px;
-    background-color: #333;
-    width: 100%;
-}
-
-body{
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    display: flex
-;
-}
-
-.nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #174ec4;
-    color: white;
-    text-align: center;
+#left-pane {
+    z-index: 1;
+    background-color: #e0e0e0e0;
+    width: 25%;
     padding: 20px;
-    width: 100vw;
-    font-size: 2.5rem;
-    top: 0;
-    font-weight: 600;
+    border-right: 2px solid #ddd;
+    max-width: 300px;
+    min-width: 250px;
+    box-shadow: -1px 1px 5px 1px rgb(0, 0, 0);
+    padding-top: 40px;
 }
 
-
-#actionbar {
+#left-pane p{
+    padding: 10px 20px;
     border-radius: 10px;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    background-color: #333;
-    padding: 8px 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    width: 100%;
-    max-width: 1200px;
-    margin-top: 20px; /* Fixed typo: 'PX' to 'px' */
-}
-
-#actionbar > p {
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.5rem;
-    font-weight: bold;
-    margin: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0, 132, 255);
+    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0);
+    font-weight: 600;
+    padding-top: 12px;
+    border: 2px solid white;
 }
 
-#actionbar > button {
-    background-color: lime;
-    color: #000;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
+#left-pane ul {
+    list-style: none;
+    padding: 5px;
+    margin-top: 5px;
+
+}
+
+#left-pane ul li {
+    margin: 15px 0px;
+    font-size: 20px;
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    padding-left: 20px;
 }
 
-#actionbar > button:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+#left-pane ul li:hover{
+    background-color: #000000b0;
+    color: white;
+    transition: all ease 0.3s;
+    transform: scaleY(1.1);
+}
+
+#login-form {
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #container {
-    background: rgba(255, 255, 255, 0.9); /* Slight transparency for modern effect */
-    border: 2px solid #007bff;
-    border-radius: 20px;
-    padding: 30px;
-    width: 60vw; /* Adjusted to use viewport width instead of fixed pixel width */
-    max-width: 600px; /* Ensure container doesn't become too wide */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 1s ease-out;
-    flex-grow: 1; /* Makes the container fill remaining space */
-    margin-top: 10px;
-}
-
-#container label {
-    display: block;
-    text-align: left;
-    margin-bottom: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-#container input,
-#container select {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    max-width: 400px;
+    background: #74747427;
+    border: 1px solid #ccc;
+    padding: 35px;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#container input, #container select {
+    width: 90%;
     padding: 10px;
-    margin-bottom: 20px;
-    font-size: 1rem;
+    margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
-    outline: none;
-    transition: box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-#container input:focus,
-#container select:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
 }
 
 #container input[type="submit"] {
-    background-color: #007bff;
+    background-color: #007BFF;
     color: white;
-    border: none;
     cursor: pointer;
-    font-size: 1rem;
-    padding: 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: none;
 }
 
 #container input[type="submit"]:hover {
     background-color: #0056b3;
-    transform: translateY(-3px);
 }
 
 #container a {
-    color: #007bff;
     text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    transition: color 0.3s ease;
+    color: #007BFF;
+    font-size: 0.9em;
 }
 
 #container a:hover {
-    color: #0056b3;
+    text-decoration: underline;
+}
+
+#hamburger {
+    display: none;
+    cursor: pointer;
 }
 
 footer {
-    margin-top: auto;
+    background: #343a40;
+    color: white;
     text-align: center;
-    color: white;
-    font-size: 1rem;
-    padding: 12px;
-    background-color: #333;
-    width: 100%;
+    padding: 20px;
+    font-size: 1.1em;
 }
 
-footer a {
-    color: lime;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-footer a:hover {
-    color: white;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
-    .nav {
-        font-size: 40px; /* Scale down font size on smaller screens */
+    #hamburger {
+        display: block;
     }
 
-    #container {
-        width: 80vw; /* Make the container take up more width on small screens */
-        padding: 20px;
+    #left-pane {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100%;
+        width: 300px;
+        background-color: #333;
+        transition: left 0.3s;
+        z-index: 1;
+        margin-top: 95px;
     }
 
-    #actionbar {
-        flex-direction: column;
-        padding: 15px;
+    #left-pane.active {
+        left: 0;
     }
 
-    #actionbar > button {
-        margin-top: 10px;
+    #login-form {
+        width: 100%;
+    }
+
+    #navbar {
+        justify-content: space-between;
     }
 }
 
-@media (max-width: 480px) {
-    .nav {
-        font-size: 30px; /* Further scale down on very small screens */
-    }
-
-    #container {
-        width: 90vw;
-        padding: 15px;
-    }
-}

@@ -8,14 +8,31 @@
 </head>
 <body>
 
+    
 <header>
     <h1>CONTACT AND SUPPORT</h1>
     <p>We are here to help you!</p>
 </header>
 
+<div id="menuToggle">☰</div>
+<div id="dashboard" class="closed">
+    <p class="dashboard">DASHBOARD</p>
+    <a href="#faqs"><i>❓</i> FAQs</a>
+    <a href="#contact-form"><i>✉️</i> Contact Form</a>
+    <a href="#contact-info"><i>📞</i> Contact Info</a>
+    <a href="#other-question"><i>📝</i> Other Questions</a>
+    <a href="#chatbot"><i>🤖</i> Chat with Us</a>
+</div>
+
 <div class="container">
     <section class="section" id="faqs">
         <h2>FAQs</h2>
+        <p>Click on a question to view the answer:</p>
+        <button class="faq-btn">What is your response time?</button>
+        <div class="faq-answer">We typically respond within 24 hours.</div>
+
+        <button class="faq-btn">Do you offer 24/7 support?</button>
+        <div class="faq-answer">Yes, our support is available around the clock.</div>
     </section>
 
     <section class="section" id="contact-form">
@@ -40,12 +57,22 @@
         <p>Helpline: <strong>1-800-123-4567</strong></p>
     </section>
 
-    <section class="section chatbot">
+    <section class="section" id="other-question">
+        <h2>Other Questions</h2>
+        <form id="other-question-form">
+            <label for="other-question">Please clarify your question:</label>
+            <textarea id="other-question" name="other-question" rows="4" placeholder="Type your question here..." required></textarea>
+            <button type="submit">Submit Question</button>
+        </form>
+    </section>
+
+    <section class="section chatbot" id="chatbot">
         <h2>Chat with Us</h2>
         <p>Our chatbot is here to assist you 24/7.</p>
-        <iframe src="https://example.com/chatbot"></iframe>
-    </section>
-</div>
+            <iframe src="https://example.com/chatbot"></iframe>
+        </section>
+    </div>
+    
 <script src="faq.js"></script>
 </body>
 </html>
