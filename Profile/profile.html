@@ -7,74 +7,114 @@
     <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-    <header class="header">
-        <img src="/placeholder.svg?height=50&width=50" alt="College Logo" class="college-logo">
-        <h1>Awesome University</h1>
-    </header>
-    <div class="container">
-        <h1>Student Profile</h1>
-        <div class="profile-picture-container">
-            <img src="/placeholder.svg?height=150&width=150" alt="Student Profile Picture" class="profile-picture" id="profilePicture">
-            <input type="file" id="profilePictureUpload" accept="image/*" style="display: none;">
-            <button onclick="document.getElementById('profilePictureUpload').click()">Change Profile Picture</button>
-        </div>
-        <div class="student-info">
-            <h2>Student Details</h2>
-            <table>
-                <tr>
-                    <th>Name:</th>
-                    <td>John Doe</td>
-                </tr>
-                <tr>
-                    <th>Student ID:</th>
-                    <td>12345678</td>
-                </tr>
-                <tr>
-                    <th>Major:</th>
-                    <td>Computer Science</td>
-                </tr>
-                <tr>
-                    <th>Year:</th>
-                    <td>Junior</td>
-                </tr>
-            </table>
-        </div>
 
-        <div class="current-projects">
-            <h2>Current Projects</h2>
-            <table id="projectsTable">
-                <tr>
-                    <th>Project Name</th>
-                    <th>Status</th>
-                </tr>
-                <tr>
-                    <td>Web Development</td>
-                    <td>In Progress</td>
-                </tr>
-                <tr>
-                    <td>Machine Learning Research</td>
-                    <td>Pending Approval</td>
-                </tr>
-            </table>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <button class="hamburger" onclick="toggleDashboard()">☰</button>
+            <h1 class="navbar-title">PROFILE PAGE</h1>
+        </nav>
+    
+    <!-- Sidebar Dashboard -->
+    <aside class="dashboard" id="dashboard">
+        <div class="dashboard-header">
+            <h2>Dashboard</h2>
+            <button class="close-btn" onclick="toggleDashboard()">×</button>
         </div>
+        <ul class="dashboard-links">
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#apply-project">Apply for Project</a></li>
+            <li><a href="#check-status">Check Status</a></li>
+            <li><a href="#logout">Logout</a></li>
+        </ul>
+    </aside>
 
-        <div class="new-project">
-            <h2>Apply for New Project</h2>
-            <form id="newProjectForm">
-                <input type="text" id="projectName" placeholder="Project Name" required>
-                <textarea id="projectDescription" placeholder="Project Description" required></textarea>
-                <button type="submit">Apply</button>
-            </form>
-        </div>
+    <!-- Main Content -->
+    <main class="content">
+        <div class="container">
+            <p>Student Profile</p>
+            <hr>
+            <!-- Profile Section -->
+            <section id="profile">
+                <h1>Welcome, John Doe</h1>
+                <div class="profile-picture-container">
+                    <img src="College Logos/nit.jpg" alt="Student Profile Picture" class="profile-picture" id="profilePicture">
+                    <input type="file" id="profilePictureUpload" accept="image/*" style="display: none;">
+                    <button class="pfchange" onclick="document.getElementById('profilePictureUpload').click()">Change Profile Picture</button>
+                </div>
+                <hr>
+            </section>
 
-        <div class="project-status">
-            <h2>Check Project Status</h2>
-            <input type="text" id="checkProjectName" placeholder="Enter Project Name">
-            <button onclick="checkProjectStatus()">Check Status</button>
-            <p id="statusResult"></p>
+            <!-- Student Info -->
+            <section class="student-info">
+                <h2>Student Details</h2>
+                <table>
+                    <tr>
+                        <th>Name:</th>
+                        <td>John Doe</td>
+                    </tr>
+                    <tr>
+                        <th>Student ID:</th>
+                        <td>12345678</td>
+                    </tr>
+                    <tr>
+                        <th>Major:</th>
+                        <td>Computer Science</td>
+                    </tr>
+                    <tr>
+                        <th>Year:</th>
+                        <td>Junior</td>
+                    </tr>
+                </table>
+            </section>
+<hr>
+            <!-- Current Projects -->
+            <section id="projects" class="current-projects">
+                <h2>Current Projects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Web Development</td>
+                            <td>In Progress</td>
+                        </tr>
+                        <tr>
+                            <td>Machine Learning Research</td>
+                            <td>Pending Approval</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+<hr>
+            <!-- Apply for New Project -->
+            <section id="apply-project" class="new-project">
+                <h2>Apply for New Project</h2>
+                <form id="newProjectForm">
+                    <input type="text" id="projectName" placeholder="Project Name" required>
+                    <textarea id="projectDescription" placeholder="Project Description" required></textarea>
+                    <button type="submit">Apply</button>
+                </form>
+            </section>
+<hr>
+            <!-- Check Project Status -->
+            <section id="check-status" class="project-status">
+                <h2>Check Project Status</h2>
+                <input type="text" id="checkProjectName" placeholder="Enter Project Name">
+                <button onclick="checkProjectStatus()">Check Status</button>
+                <p id="statusResult"></p>
+            </section>
         </div>
-    </div>
+    </main>
+
+    <footer>
+        &copy; 2025 Your Company. All rights reserved. Hot and happening footer here!
+    </footer>
+
     <script src="profile.js"></script>
 </body>
 </html>
-
