@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2196F3;
+    color:white;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    max-width: 800px;
+    margin: 2em auto;
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 2em;
+}
+
+h2 {
+    color: #2196F3;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+li {
+    margin-bottom: 1em;
+}
+
+#general-research-overview,
+#research-objectives,
+#research-policy,
+#evaluation-of-research,
+#funding-of-research,
+#policy-for-obtaining-seed-money,
+#support-for-conference-participation {
+    background-color: #f9f9f9;
+    padding: 1em;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-top: 0;
+}

@@ -1,0 +1,112 @@
+Source Code Report:
+
+    This documentation includes a detailed explanation of the configuration steps and code usages necessary to make things work and
+    understand how it works. The project directory includes a directory called "Dependencies" which contains all the necessary files
+    for configuration but to do it manually please follow along with online tutorials.
+
+Configuration:
+
+    1. Frontend Configuration:
+
+        The frontend files are the html , css and js files. They can be run on any browser as a standalone website. no extra configuration
+        steps are necessary as long as you have a working browser or a local server(e.g. vscode live server).
+
+    2. Backend Configuration:
+
+        The backend files are the php files. To use php as your server side you must have a working php compatible server Server. For
+        testing  purposes as in our case you can use the php server extension of vscode or third part packages like XAMPP. In our case we
+        have setup php manually so we had to tweak some lines of code in the php.ini file in php download. for manual download please follow
+        online tutorials else the dependencies folder contails the full php package necessary.
+
+        The server we used is of configuration "localhost:3000". to use a different configuration you must make the necessary changes in
+        frontend files.
+
+    3. Database Configuration:
+
+        The database we have used is MYSQL. to use it you must have it downloaded on the serverside. For testing purposes you must set up
+        the database in your local computer. The necessary details must be filled up in db_config.php file. The database we have used is
+        "rfmo_database". You can find it in the root directory.
+
+Project Structure:
+
+    Root directory:RFMO
+        1.Admin- admin page and database support for faq's , project and so on.
+        2.Home- home page design .
+        3.Login - login page, registration page and support for forgot password.
+        4.Profile - progile page to view personal details, project status and submission. 
+        5.Research - ongoing research grants and for fillup for seed funding.
+        6.RFMO - grant submission guidelines , selection criteria, process and resources available.
+        7.Support - faq section , admin suppport , chatbot
+        8.College Logos - used for profile page
+        9.db_config.php - database configuration
+        10.Dependencies - All the files necessary to use the website
+        11.rfmo_database - this is a demo mysql dump file for testing purposes
+
+Project Details:
+
+
+    1.Admin:
+
+    No files listed
+
+    2.College Logos:
+
+    No files listed ( likely contains logo images )
+
+    3.Home:
+
+        Contains files for the homepage:
+        - home.html: Homepage HTML structure
+        - home_style.css: Homepage CSS styles
+        - script.js: Homepage JavaScript functionality
+        - Sounds: Directory for sound files (used on the homepage )
+        - SVGs: Directory for SVG files (used on the homepage )
+
+    4.Login:
+
+        Contains files for user authentication:
+        - forgot_password.html: Forgot password HTML page
+        - forgot_password_handler.php: Forgot password PHP handler for otp generation
+        - login.html: Login HTML page
+        - login.css: Login CSS styles
+        - login-script.js: Login JavaScript functionality
+        - login_handler.php: Login PHP handler for use verification
+        - registration.html: User registration HTML page(new user signup)
+
+    5.Profile:
+
+        Contains files for user profiles:
+        - new_project.php: New project PHP handler for new project submission
+        - profile.css: Profile CSS styles
+        - profile.html: Profile HTML page
+        - profile.js: Profile JavaScript functionality
+
+    6.Research:
+
+    No files listed
+
+    7.RFMO:
+
+    No files listed
+
+    8.Support:
+
+        Contains files for support and FAQs:
+        - faq.js: FAQ JavaScript functionality
+        - new_faq.php: New FAQ PHP handler for new questions
+        - style.css: Support CSS styles
+        - support_faq_handler.php: Support FAQ PHP handler for showing list of FAQs
+        - support_form_handler.php: Support form PHP handler for submitting support requests to admin
+        - support.html: Support HTML page
+
+    9.Database Configuration:
+
+        db_config.php: Database configuration PHP file
+
+    10.Dependencies:
+
+        All the files necessary to use the website i.e php source files and mysql installer.
+
+    11.rfmo_database:
+    
+        this is a demo mysql dump file for testing purposes. for real worl use replace with original database.

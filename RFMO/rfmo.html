@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFMO</title>
+    <link rel="stylesheet" href="rfmo.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="guidelines.html">Seed Funding Guidelines</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="quarterly-evaluation-form">
+            <h2>Quarterly Evaluation Form</h2>
+            <form>
+                <label for="project-title">Project Title:</label>
+                <input type="text" id="project-title" name="project-title"><br><br>
+                <label for="project-status">Project Status:</label>
+                <select id="project-status" name="project-status">
+                    <option value="in-progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                    <option value="delayed">Delayed</option>
+                </select><br><br>
+                <label for="progress-description">Progress Description:</label>
+                <textarea id="progress-description" name="progress-description"></textarea><br><br>
+                <label for="milestones-achieved">Milestones Achieved:</label>
+                <textarea id="milestones-achieved" name="milestones-achieved"></textarea><br><br>
+                <label for="challenges-faced">Challenges Faced:</label>
+                <textarea id="challenges-faced" name="challenges-faced"></textarea><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+        <section id="approved-projects">
+            <h2>Approved Projects</h2>
+            <table>
+                <tr>
+                    <th>Project Title</th>
+                    <th>Project Status</th>
+                    <th>Milestones Achieved</th>
+                    <th>Challenges Faced</th>
+                </tr>
+                <tr>
+                    <td>Project 1</td>
+                    <td>In Progress</td>
+                    <td>Milestone 1, Milestone 2</td>
+                    <td>None</td>
+                </tr>
+                <tr>
+                    <td>Project 2</td>
+                    <td>Completed</td>
+                    <td>Milestone 1, Milestone 2, Milestone 3</td>
+                    <td>Technical issues</td>
+                </tr>
+                <tr>
+                    <td>Project 3</td>
+                    <td>Delayed</td>
+                    <td>Milestone 1</td>
+                    <td>Funding issues</td>
+                </tr>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

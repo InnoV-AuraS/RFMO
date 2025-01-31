@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="login.css" rel="stylesheet" tupe="text/css">
+    <link href="../Login/login.css" rel="stylesheet" type="text/css">
     <title>Document</title>
-</head>
 </head>
 <body>
 
@@ -26,7 +25,7 @@
         </div>
 
         <div id="login-form">
-            <form id="container" action="http://localhost:3000/RFMO/login_handler.php" method="post">
+            <form id="container" action="http://localhost:3000/RFMO/Login/login_handler.php" method="post">
                 <label for="type">Choose your Authentication:</label>
                 <select name="type" required>
                     <option value="">Choose Type</option>
@@ -43,7 +42,7 @@
 
                 <input type="submit" value="Log in"><br/><br/>
 
-                <a href="forgot_password.php">Forgot Your Password?</a>
+                <a href="http://localhost:3000/RFMO/Login/forgot_password.php">Forgot Your Password?</a>
             </form>
         </div>
     </div>
@@ -52,6 +51,6 @@
         &copy; 2025 Your Company. All rights reserved. Hot and happening footer here!
     </footer>
 
-    <script src="login-script.js"></script>
+    <script src="../Login/login-script.js"></script>
 
 </html>

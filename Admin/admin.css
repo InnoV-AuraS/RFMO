@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+main {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #2196F3; /* blue */
+  margin-bottom: 10px;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #2196F3; /* blue */
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Profile Styles */
+
+#profile {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+#profile p {
+  margin-bottom: 10px;
+}
+
+/* Projects Table Styles */
+
+#projects-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#projects-table th, #projects-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#projects-table th {
+  background-color: #f0f0f0;
+}
+
+/* Filter Faculty Styles */
+
+#filter-faculty {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+
+#filter-form {
+  margin-bottom: 20px;
+}
+
+#filter-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#filter-form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* FAQs Table Styles */
+
+#faqs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#faqs-table th, #faqs-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#faqs-table th {
+  background-color: #f0f0f0;
+}
+
+/* Answer Form Styles */
+
+#answer-form {
+  margin-bottom: 20px;
+}
+
+#answer-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#answer-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* Guidelines Form Styles */
+
+#guidelines-form {
+  margin-bottom: 20px;
+}
+
+#guidelines-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#guidelines-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}

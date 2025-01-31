@@ -1,0 +1,5 @@
+php-8.4.2-Win32-vs17-x64[php source files]
+
+mysql-8.4.3-winx64[mysql installer]
+
+Both are free and available on any browser , like Chrome.
