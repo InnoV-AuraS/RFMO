@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Profile - College Website</title>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="../Profile/profile.css">
 </head>
 <body>
     <header class="header">
@@ -39,7 +39,6 @@
                 </tr>
             </table>
         </div>
-
         <div class="current-projects">
             <h2>Current Projects</h2>
             <table id="projectsTable">
@@ -61,8 +60,9 @@
         <div class="new-project">
             <h2>Apply for New Project</h2>
             <form id="newProjectForm">
-                <input type="text" id="projectName" placeholder="Project Name" required>
-                <textarea id="projectDescription" placeholder="Project Description" required></textarea>
+                <input type="text" id="projectName" name="name" placeholder="Project Name" required>
+                <input type="text" id="id" name="ID" placeholder="ID" required>
+                <textarea id="projectDescription" name="description" placeholder="Project Description" required></textarea>
                 <button type="submit">Apply</button>
             </form>
         </div>
@@ -74,7 +74,7 @@
             <p id="statusResult"></p>
         </div>
     </div>
-    <script src="profile.js"></script>
+    <script src="../Profile/profile.js"></script>
 </body>
 </html>
 

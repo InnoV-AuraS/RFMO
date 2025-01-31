@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Projects</title>
+    <link rel="stylesheet" href="research.css">
+</head>
+<body>
+
+    <!-- Featured Projects Section -->
+    <section class="featured-projects">
+        <h2>Featured Projects</h2>
+        <div class="carousel">
+            <div class="project-card">
+                <h3>Featured Project 1</h3>
+                <p>Short description of the featured project.</p>
+            </div>
+            <div class="project-card">
+                <h3>Featured Project 2</h3>
+                <p>Short description of the featured project.</p>
+            </div>
+            <div class="project-card">
+                <h3>Featured Project 3</h3>
+                <p>Short description of the featured project.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Projects Section -->
+    <section class="projects">
+        <h2>Demo Projects</h2>
+
+        <div class="project" onclick="toggleDetails('project1-details')">
+            <h3>Project 1: Web Application Development</h3>
+            <div id="project1-details" class="project-details">
+                <p><strong>Description:</strong> Develop a full-stack web application for managing tasks.</p>
+                <p><strong>Duration:</strong> 3 months</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Node.js</p>
+                <button class="interest-btn">Express Interest</button>
+            </div>
+        </div>
+
+        <div class="project" onclick="toggleDetails('project2-details')">
+            <h3>Project 2: Mobile App Development</h3>
+            <div id="project2-details" class="project-details">
+                <p><strong>Description:</strong> Build a mobile app for grocery shopping.</p>
+                <p><strong>Duration:</strong> 4 months</p>
+                <p><strong>Technologies:</strong> React Native, Firebase</p>
+                <button class="interest-btn">Express Interest</button>
+            </div>
+        </div>
+
+        <div class="project" onclick="toggleDetails('project3-details')">
+            <h3>Project 3: E-Commerce Website</h3>
+            <div id="project3-details" class="project-details">
+                <p><strong>Description:</strong> Create an e-commerce website for an online clothing store.</p>
+                <p><strong>Duration:</strong> 5 months</p>
+                <p><strong>Technologies:</strong> HTML, CSS, PHP, MySQL</p>
+                <button class="interest-btn">Express Interest</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call-to-Action (CTA) Button -->
+    <button class="cta-btn">Explore More Projects</button>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial">
+            <p>"This was a fantastic project! The team delivered everything as expected."</p>
+            <cite>- Client Name</cite>
+        </div>
+        <div class="testimonial">
+            <p>"I highly recommend working with this team. The project exceeded our expectations."</p>
+            <cite>- Partner Name</cite>
+        </div>
+    </section>
+
+    <!-- Latest News/Blog Section -->
+    <section class="latest-news">
+        <h2>Latest News</h2>
+        <div class="news-article">
+            <h3>Article Title 1</h3>
+            <p>Summary of the news article or blog post.</p>
+            <a href="#">Read more</a>
+        </div>
+        <div class="news-article">
+            <h3>Article Title 2</h3>
+            <p>Summary of the news article or blog post.</p>
+            <a href="#">Read more</a>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="contact-info">
+            <p>Contact us at: info@example.com</p>
+        </div>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+    <script src="research.js"></script>
+</body>
+</html>
