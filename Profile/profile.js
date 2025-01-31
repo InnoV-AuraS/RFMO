@@ -1,3 +1,9 @@
+
+function toggleDashboard() {
+    const dashboard = document.getElementById('dashboard');
+    dashboard.classList.toggle('open');
+
+
 document.getElementById('newProjectForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var projectName = document.getElementById('projectName').value;
@@ -46,4 +52,4 @@ function handleProfilePictureUpload(event) {
 }
 
 // Add event listener for profile picture upload
-document.getElementById('profilePictureUpload').addEventListener('change', handleProfilePictureUpload);
+document.getElementById('profilePictureUpload').addEventListener('change', handleProfilePictureUpload)};

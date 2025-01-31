@@ -1,20 +1,173 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
-    padding: 20px;
     background-color: #f4f4f4;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+nav{
+    height: 100px;
+    background-color: #007bff;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    box-shadow: -1px 1px 5px 1px rgb(0, 0, 0);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.hamburger{
+    background-color: unset;
+    font-size: 30px;
+    transition: all ease-in-out 0.3s;
+    color: #ddd;
+    position: fixed;
+    left: 5px;
+    display: none;
+
+}
+
+.hamburger:hover{
+    transform: scale(1.2);
+    background-color: unset;
+    color: white;
+}
+
+.navbar-title{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.dashboard {
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    transition: left 0.3s ease;
+    box-shadow: -1px 1px 5px 1px rgb(0, 0, 0);
+    z-index: 1;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.dashboard-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.dashboard-header .close-btn:hover {
+    color: #333;
+}
+
+.dashboard-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-links li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-links li:last-child {
+    border-bottom: none;
+}
+
+.dashboard-links a {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dashboard-links a:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dashboard-links a span {
+    margin-right: 8px;
+}
+
+.dashboard-title {
+    text-align: center;
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.university{
+    color: #ddd;
+}
+
 .container {
-    max-width: 800px;
     margin: auto;
     background: white;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width:calc(100%-300px);
+    margin-left: 300px;
+    margin-top: 100px;
 }
+
+.container p{
+    font-size: 35px;
+    font-weight: 600;
+    color: #0059ff;
+    padding-bottom: 20px;
+}
+
+hr{
+    margin-bottom: 20px;
+}
+
 h1, h2 {
-    color: #333;
+    color: #007bff;
+    margin-top: 0px;
+    margin-left: 10px;
 }
 .student-info, .current-projects, .new-project, .project-status {
     margin-bottom: 20px;
@@ -40,13 +193,22 @@ input, textarea, button {
     padding: 10px;
 }
 button {
-    background-color: #4CAF50;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
 }
+.pfchange{
+    height: 40px;
+    width: auto;
+    background-color: rgba(36, 36, 36, 0.377);
+    border: 1px solid black;
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+}
+
 button:hover {
-    background-color: #45a049;
+    background-color: #1b1b1b74;
+    color: rgb(0, 0, 0);
 }
 .header {
     background-color: #003366;
@@ -67,14 +229,67 @@ button:hover {
     height: 50px;
 }
 .profile-picture {
-    width: 150px;
-    height: 150px;
+    margin: 0px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
+    padding :4px;
+    border: 2px solid black;
     margin-bottom: 20px;
 }
 .profile-picture-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 20px;
+    align-items: center;
+}
+
+footer {
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    font-size: 14px;
+    max-width: calc(100% - 300px);
+    margin-left: 300px;
+    text-align: center;
+}
+
+@media (max-width: 780px) {
+
+    .hamburger{
+        display: block;
+    }
+    .navbar-title{
+font-size: 1.5rem;
+    }
+
+    .container{
+        width: 92%;
+        margin-left: 0px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .profile-picture-container{
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+
+    .dashboard {
+    left: -320px; /* Initially hidden */
+    transition: all ease-in-out 0.3s;
+    }
+
+    .dashboard.open {
+        left: 0; /* When open */
+    }
+
+    footer{
+        margin-left: 0;
+        max-width: 100%;
+    }
+
 }

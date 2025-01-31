@@ -13,29 +13,33 @@ body {
 
 #navbar {
     display: flex;
+    flex-direction: column;
+    gap:20px;
     justify-content: center;
     align-items: center;
-    padding: 25px 20px;
+    padding: 20px 15px;
     background-color: #007BFF;
     color: white;
-    font-size: 2em;
+    font-size: 3em;
     box-shadow: 1px 1px 5px 1px rgb(0, 0, 0);
     z-index: 4;
     position: sticky;
     top: 0;
 }
 
-#navbar button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
+.all{
+    display: flex;
+    position:absolute
 }
 
-#navbar button:hover {
-    background-color: #569063;
+#hamburger{
+    z-index: 5;
+    color: #ddd;
+    font-size: 2em;
+    padding-left: 15px;
+    padding-top: 12px;
+    position: fixed;
+    
 }
 
 .main {
@@ -45,75 +49,88 @@ body {
 
 #left-pane {
     z-index: 1;
-    background-color: #e0e0e0e0;
+    background-color: #ffffff;
     width: 25%;
-    padding: 20px;
     border-right: 2px solid #ddd;
-    max-width: 300px;
-    min-width: 250px;
+    max-width: 320px;
+    min-width: 300px;
     box-shadow: -1px 1px 5px 1px rgb(0, 0, 0);
-    padding-top: 40px;
+    padding-top: 0px;
+    margin-top: 2px;
+    position: fixed;
+    height: 100%
 }
 
 #left-pane p{
-    padding: 10px 20px;
-    border-radius: 10px;
     display: flex;
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    border-bottom: 2px solid black;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(0, 132, 255);
-    box-shadow: 1px 1px 5px 1px rgb(0, 0, 0);
-    font-weight: 600;
-    padding-top: 12px;
-    border: 2px solid white;
+    padding: 15px 20px;
+    margin-top: px;
+    padding: 30px 0px;
 }
 
 #left-pane ul {
     list-style: none;
     padding: 5px;
-    margin-top: 5px;
+    margin: 0px 10px;
 
 }
 
 #left-pane ul li {
-    margin: 15px 0px;
-    font-size: 20px;
+    font-size: 25px;
     cursor: pointer;
-    margin-top: 20px;
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    padding-left: 20px;
+    margin: 0px;
+    padding: 5px 5px;
+    padding-left: 10px;
 }
 
-#left-pane ul li:hover{
-    background-color: #000000b0;
-    color: white;
-    transition: all ease 0.3s;
-    transform: scaleY(1.1);
+#left-pane a {
+    width: 100%;
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #44444481;
+}
+
+#left-pane a:hover {
+    background-color: #575757;
+    color: #ffffff;
+}
+
+#left-pane a i{
+    margin-right: 20px;
 }
 
 #login-form {
-    width: 75%;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 300px
 }
 
 #container {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     background: #74747427;
     border: 1px solid #ccc;
-    padding: 35px;
+    padding: 30px;
     border-radius: 5px;
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin: 50px;
 }
 
 #container input, #container select {
@@ -151,16 +168,26 @@ body {
 }
 
 footer {
-    background: #343a40;
+    right: 0;
+    background-color: #333;
     color: white;
+    padding: 20px 10px;
+    font-size: 14px;
+    max-width: calc(100% - 300px);
+    margin-left: 300px;
     text-align: center;
-    padding: 20px;
-    font-size: 1.1em;
 }
 
 @media (max-width: 768px) {
     #hamburger {
         display: block;
+        top:0;
+        margin-left: 0px;
+    }
+
+    #navbar {
+        font-size: 1.2rem;
+        justify-content: center;
     }
 
     #left-pane {
@@ -169,22 +196,27 @@ footer {
         top: 0;
         height: 100%;
         width: 300px;
-        background-color: #333;
         transition: left 0.3s;
         z-index: 1;
         margin-top: 95px;
     }
 
+    #left-pane p{
+        margin-top: 5px;
+    }
+    
     #left-pane.active {
         left: 0;
     }
 
     #login-form {
         width: 100%;
+        margin-left: 0px;
     }
 
-    #navbar {
-        justify-content: space-between;
+    footer {
+        max-width: 100% ;
+        margin-left: 0px;
     }
 }
 

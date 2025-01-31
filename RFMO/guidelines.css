@@ -1,57 +1,245 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    color: #333;
 }
 
-header {
-    background-color: #2196F3;
-    color:white;
-    padding: 1em;
+/* Header (Navbar) Styles */
+.navbar {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    background-color: #007bff;
+    color: #fff;
+    z-index: 1000;
+    box-shadow: -1px 1px 5px 1px rgb(0, 0, 0);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+}
+
+.brand a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li {
+    margin-left: 20px;
+}
+
+.navbar p {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6em;
+}
+
+.hamburger {
+    display: none;
+}
+
+.dashboard {
+    width: 300px;
+    background-color: white;
+    box-shadow: -1px 1px 5px 1px rgb(0, 0, 0);
+    overflow: hidden;
+    height: 100%;
+    position: fixed;
+    left: 0; /* Always visible on wide screens */
+    top: 0;
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+    margin-top: 100px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: #f9f9f9;
+}
+
+.dashboard-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.dashboard-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #888;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.dashboard-header .close-btn:hover {
+    color: #333;
+}
+
+.dashboard-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-links li {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dashboard-links li:last-child {
+    border-bottom: none;
+}
+
+.dashboard-links a {
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dashboard-links a:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.dashboard-links a span {
+    margin-right: 8px;
+}
+
+.dashboard-title {
+    text-align: center;
+    padding: 16px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #444;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    background-color: #e4e4e458;
+    border-radius: 10px;
+    padding:30px;
+    margin-left: 300px;
+}
+
+.close-btn{
+    display: none;
+}
+
+/* Main Content Styles */
+main {
+   padding: 0;
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 20px;
+}
+
+/* Heading Styles */
+h1, h2 {
+    margin-top: 0;
+}
+
+footer {
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    font-size: 14px;
+    max-width: calc(100% - 300px);
+    margin-left: 300px;
     text-align: center;
 }
 
-main {
-    max-width: 800px;
-    margin: 2em auto;
-    padding: 1em;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #004080;
+        position: absolute;
+        top: 100px;
+        left: 0;
+    }
+
+    .navbar {
+            font-size: 1rem;  
+            font-weight: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+  
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .navbar p{
+        font-size: 1.5rem;
+        margin-left: 20px;
+
+    }
+    .dashboard {
+        transform: translateX(-100%); /* Moves the dashboard out of view */
+    }
+
+    .dashboard.visible {
+        transform: translateX(0); /* Bring it back into view */
+    }
+
+    .close-btn{
+        display: block;
+    }
+
+    .content{
+        margin-left: 0;
+    }
+
+    .hamburger {
+        display: block;
+        font-size: 30px;
+        left: 15px;
+        position: fixed;
+    }
+
+    footer {
+        bottom: 0;
+        max-width:100%; 
+        margin-left: 0;
+        text-align: center;
+    }
+
 }
 
-section {
-    margin-bottom: 2em;
-}
-
-h2 {
-    color: #2196F3;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-li {
-    margin-bottom: 1em;
-}
-
-li {
-    margin-bottom: 1em;
-}
-
-#general-research-overview,
-#research-objectives,
-#research-policy,
-#evaluation-of-research,
-#funding-of-research,
-#policy-for-obtaining-seed-money,
-#support-for-conference-participation {
-    background-color: #f9f9f9;
-    padding: 1em;
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    margin-top: 0;
-}
