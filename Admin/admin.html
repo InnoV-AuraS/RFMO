@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Admin/admin.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Submitted Projects</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Guidelines</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Profile Section -->
+        <section id="profile">
+            <h2>Admin Profile</h2>
+            <p>Name: <span id="admin-name"></span></p>
+            <p>College: <span id="admin-college"></span></p>
+            <p>Speciality: <span id="admin-speciality"></span></p>
+        </section>
+
+        <!-- Submitted Projects Section -->
+        <section id="submitted-projects">
+            <h2>Submitted Projects</h2>
+            <table id="projects-table">
+                <thead>
+                    <tr>
+                        <th>Project Name</th>
+                        <th>Faculty Name</th>
+                        <th>College</th>
+                    </tr>
+                </thead>
+                <tbody id="projects-tbody">
+                    <!-- projects data will be populated here -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Filter Faculty Section -->
+        <section id="filter-faculty">
+            <h2>Filter Faculty by Speciality</h2>
+            <form id="filter-form">
+                <label for="speciality">Select Speciality:</label>
+                <select id="speciality" name="speciality">
+                    <option value="">Select Speciality</option>
+                    <!-- speciality options will be populated here -->
+                </select>
+                <button id="filter-btn">Filter</button>
+            </form>
+            <div id="filtered-faculty">
+                <!-- filtered faculty data will be populated here -->
+            </div>
+        </section>
+
+        <!-- Answer FAQs Section -->
+        <section id="answer-faqs">
+            <h2>Answer New FAQs</h2>
+            <table id="faqs-table">
+                <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                    </tr>
+                </thead>
+                <tbody id="faqs-tbody">
+                    <!-- faqs data will be populated here -->
+                </tbody>
+            </table>
+            <form id="answer-form">
+                <label for="answer">Enter Answer:</label>
+                <textarea id="answer" name="answer"></textarea>
+                <button id="answer-btn">Submit Answer</button>
+            </form>
+        </section>
+
+        <!-- Add Guidelines Section -->
+        <section id="add-guidelines">
+            <h2>Add Guidelines</h2>
+            <form id="guidelines-form">
+                <label for="guideline">Enter Guideline:</label>
+                <textarea id="guideline" name="guideline"></textarea>
+                <button id="guidelines-btn">Add Guideline</button>
+            </form>
+            <div id="guidelines-list">
+                <!-- guidelines data will be populated here -->
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,222 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f9fc; /* Light grey background */
+    color: #333;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #0056b3; /* Deep blue for section titles */
+}
+
+/* Featured Projects Section */
+.featured-projects {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.featured-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #e6f1ff; /* Light blue background for the project cards */
+    padding: 2rem;
+    border-radius: 10px;
+    width: 28%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Main Projects Section */
+.projects {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.project {
+    background-color: #f1f9ff;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.project:hover {
+    background-color: #e6efff;
+}
+
+.project-details {
+    display: none;
+    margin-top: 1rem;
+    background-color: #e6f1ff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.interest-btn {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.interest-btn:hover {
+    background-color: #00429b;
+}
+
+/* Testimonials Section */
+.testimonials {
+    background-color: #ffffff;
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-bottom: 3rem;
+}
+
+.testimonial {
+    background-color: #f1f9ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonial cite {
+    font-weight: bold;
+    margin-top: 1rem;
+    display: block;
+    color: #0056b3;
+}
+
+/* Latest News Section */
+.latest-news {
+    padding: 4rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.news-article {
+    margin-bottom: 2rem;
+}
+
+.news-article h3 {
+    font-size: 1.6rem;
+    color: #0056b3;
+}
+
+.news-article p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+.news-article a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.news-article a:hover {
+    color: #003d80;
+}
+
+/* Call-to-Action Button */
+.cta-btn {
+    display: block;
+    width: 100%;
+    background-color: #0066cc;
+    color: #fff;
+    padding: 1.2rem;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-top: 2.5rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #004da3;
+}
+
+/* Footer Section */
+footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 4px solid #0056b3;
+}
+
+footer .contact-info p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin-left: 1.5rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-media a:hover {
+    color: #00aaff;
+}
