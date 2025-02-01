@@ -1,5 +1,5 @@
 <?php
-function sendMessage($name,$email,$message){
+function sendMessage($name,$email,$message){//sender code here
 return true;
 }
 

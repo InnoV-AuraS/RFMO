@@ -6,7 +6,6 @@ header("Access-Control-Allow-Headers: Content-Type,Accept");
 
 $flag=false;
 require '../db_config.php';
-$data=[];
 
 try{
 $conn=new mysqli($servername,$username,$password,$dbname);

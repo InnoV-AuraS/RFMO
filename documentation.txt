@@ -84,13 +84,22 @@ Project Details:
         - profile.html: Profile HTML page
         - profile.js: Profile JavaScript functionality
 
-    6.Research:
+    6.RFMO:
 
-    Contains files for user Research:
+        Contains files for user profiles:
+        - grant_handler.php: PHP handler for new project grant request
+        - rfmo.css: rfmo CSS styles
+        - rfmo.html: rfmo HTML page
+        - guidelines.css: guidelines CSS styles
+        - guidelines.html: guidelines HTML page
+        - guidelines.js: guidelines JavaScript functionality
 
-    7.RFMO:
+    7.Research:
 
-    Contains Files Required For RFMO Webpage
+        Contains files for user profiles:
+        - research.css: research CSS styles
+        - research.html: research HTML page
+        - research.js: research JavaScript functionality
 
     8.Support:
 
@@ -113,3 +122,9 @@ Project Details:
     11.rfmo_database:
     
         this is a demo mysql dump file for testing purposes. for real worl use replace with original database.
+
+    12.REGESTRATION://there is a typo here(please ignore)
+
+        Contains files for user profiles:
+        - regestration.css: regestration CSS styles
+        - regestration.html: regestration HTML page
