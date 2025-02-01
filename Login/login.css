@@ -20,11 +20,12 @@ body {
     padding: 20px 15px;
     background-color: #007BFF;
     color: white;
-    font-size: 3em;
+    font-size: 2em;
     box-shadow: 1px 1px 5px 1px rgb(0, 0, 0);
     z-index: 4;
     position: sticky;
     top: 0;
+    height: 100px;
 }
 
 .all{
@@ -52,7 +53,7 @@ body {
     background-color: #ffffff;
     width: 25%;
     border-right: 2px solid #ddd;
-    max-width: 320px;
+    max-width: 300px;
     min-width: 300px;
     box-shadow: -1px 1px 5px 1px rgb(0, 0, 0);
     padding-top: 0px;
@@ -61,18 +62,44 @@ body {
     height: 100%
 }
 
+hr {
+    border: none; /* Remove default border */
+    height: 1px; /* Define thickness */
+    background-color: #1e1e1e31; /* Apply semi-transparent white color */
+}
+
+.close-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+}
+
+.close-btn button{
+    background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-right: 30px;
+  color: #888;
+}
+
+.close-btn button:hover{
+color: black;
+}
+
+.close-btn p{
+    color: #333;
+}
+
 #left-pane p{
     display: flex;
     color: rgb(0, 0, 0);
-    border-bottom: 2px solid black;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px 20px;
-    margin-top: px;
     padding: 30px 0px;
+    margin-left: 10px;
 }
 
 #left-pane ul {
@@ -83,27 +110,23 @@ body {
 }
 
 #left-pane ul li {
-    font-size: 25px;
-    cursor: pointer;
-    margin: 0px;
-    padding: 5px 5px;
-    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #555;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.275);
 }
 
 #left-pane a {
-    width: 100%;
-    color: rgb(0, 0, 0);
-    padding: 10px;
-    font-size: 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #44444481;
+   text-decoration: none;
+   border-bottom: 1px solid grey;
 }
 
-#left-pane a:hover {
-    background-color: #575757;
-    color: #ffffff;
+#left-pane li:hover {
+    background-color: #57575727;
 }
 
 #left-pane a i{
@@ -122,7 +145,7 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 350px;
+    max-width: 450px;
     background: #74747427;
     border: 1px solid #ccc;
     padding: 30px;
@@ -181,7 +204,7 @@ footer {
 @media (max-width: 768px) {
     #hamburger {
         display: block;
-        top:0;
+        top:12px;
         margin-left: 0px;
     }
 

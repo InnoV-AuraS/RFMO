@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    background-color: #005eff;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Dashboard */
+.dashboard {
+    width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    padding: 20px;
+    box-shadow: -1px 1px 10px 8px rgba(0, 0, 0, 0.1);
+    transition: left 0.3s ease;
+}
+
+/* Links inside the dashboard */
+.dashboard a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.122);
+}
+
+.dashboard a:hover {
+    background-color: #44444424;
+}
+
+/* Form container */
+.container {
+    margin-left: 500px;
+    padding: 50px;
+    width: 50%;
+    background: white;
+    padding-right: 70px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #333;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Hamburger Menu */
+.hamburger {
+    position: absolute;
+    top: 33px;
+    left: 30px;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    display: none; /* Hidden by default */
+}
+
+footer {
+    right: 0;
+    background-color: #333;
+    color: white;
+    padding: 20px 10px;
+    font-size: 14px;
+    max-width: calc(100% - 300px);
+    margin-left: 300px;
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 780px) {
+    .dashboard {
+        left: -350px; /* Hide dashboard */
+    }
+
+    footer {
+        max-width: 100% ;
+        margin-left: 0px;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger */
+    }
+
+    .dashboard.active {
+        left: 0; /* Show dashboard when active */
+    }
+
+    .container{
+        margin-left: 110px;
+    }
+}
+
+@media screen and (min-width: 780px) {
+    .dashboard {
+        left: 0; /* Always visible */
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger */
+    }
+}

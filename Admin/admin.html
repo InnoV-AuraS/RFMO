@@ -7,28 +7,42 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Submitted Projects</a></li>
-                <li><a href="#">FAQs</a></li>
-                <li><a href="#">Guidelines</a></li>
-            </ul>
-        </nav>
+    <header class="navbar">
+        <div class="navbar-container">
+            <div class="hamburger" onclick="toggleDashboard()">
+                ☰
+            </div>
+            <div class="brand">
+                <p>ADMIN PORTAL
+                <p>            </div>
+        </div>
     </header>
+        <aside class="dashboard" id="dashboard">
+            <div class="dashboard-header">
+                <h2>Dashboard</h2>
+                <button class="close-btn" onclick="toggleDashboard()">×</button>
+            </div>
+            <ul class="dashboard-links">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#apply-project">Apply for Project</a></li>
+                <li><a href="#check-status">Check Status</a></li>
+                <li><a href="#logout">Logout</a></li>
+            </ul>
+        </aside>
+
 
     <!-- Main Content Section -->
     <main>
         <!-- Profile Section -->
         <section id="profile">
             <h2>Admin Profile</h2>
+            <hr>
             <p>Name: <span id="admin-name"></span></p>
             <p>College: <span id="admin-college"></span></p>
             <p>Speciality: <span id="admin-speciality"></span></p>
         </section>
-
+<hr>
         <!-- Submitted Projects Section -->
         <section id="submitted-projects">
             <h2>Submitted Projects</h2>
@@ -45,10 +59,12 @@
                 </tbody>
             </table>
         </section>
+        <hr>
 
         <!-- Filter Faculty Section -->
         <section id="filter-faculty">
             <h2>Filter Faculty by Speciality</h2>
+            <hr>
             <form id="filter-form">
                 <label for="speciality">Select Speciality:</label>
                 <select id="speciality" name="speciality">
@@ -61,7 +77,7 @@
                 <!-- filtered faculty data will be populated here -->
             </div>
         </section>
-
+<hr>
         <!-- Answer FAQs Section -->
         <section id="answer-faqs">
             <h2>Answer New FAQs</h2>
@@ -82,7 +98,7 @@
                 <button id="answer-btn">Submit Answer</button>
             </form>
         </section>
-
+<hr>
         <!-- Add Guidelines Section -->
         <section id="add-guidelines">
             <h2>Add Guidelines</h2>
@@ -96,5 +112,9 @@
             </div>
         </section>
     </main>
+    <footer>
+        &copy; 2025 Your Company. All rights reserved. Hot and happening footer here!
+    </footer>
+    <script src="../Admin/admin.js"></script>
 </body>
 </html>
