@@ -47,11 +47,14 @@ Project Details:
 
     1.Admin:
 
-    No files listed
+    Contains files for the Admin Page:
+        - admin.html: Admin HTML structure
+        - admin_style.css: Admin CSS styles
+        - admin_script.js: Admin JavaScript functionality
 
     2.College Logos:
 
-    No files listed ( likely contains logo images )
+        - Contains logo images of colleges or institutions under JIS Group of Education Initiatives.
 
     3.Home:
 
@@ -83,11 +86,11 @@ Project Details:
 
     6.Research:
 
-    No files listed
+    Contains files for user Research:
 
     7.RFMO:
 
-    No files listed
+    Contains Files Required For RFMO Webpage
 
     8.Support:
 
