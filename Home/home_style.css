@@ -40,8 +40,9 @@ body {
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
-    margin-bottom: 20px;
+    border-bottom: 20px solid rgba(0, 0, 0, 0.453);
     padding-bottom: 20px;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.9), 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
 header {
@@ -482,7 +483,7 @@ nav ul li a:hover {
     height: 100vh; /* Full viewport height to center the logo */
     width: 100%; /* Full width to ensure responsiveness */
     position: absolute; /* Ensures proper alignment */
-    z-index: 5;
+    z-index: 1;
 }
 
 .links p{
@@ -524,6 +525,63 @@ nav ul li a:hover {
 
 .links p:hover{
 transform: scale(1.1);
+}
+
+/* Featured Projects Section */
+
+.featured-projects {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2200ff,rgba(0, 60, 255, 0.907),rgba(0, 140, 255, 0.785), #00d9ffb5, #00fff75b);
+    padding: 4rem 2rem;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.9), 0 4px 10px rgba(0, 0, 0, 0.6);
+    padding-top: 100px;
+}
+
+.featured-projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+background-color: rgba(255, 255, 255, 0.289);
+border-radius: 8px;
+box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.9), 0 4px 10px rgba(0, 0, 0, 0.6);
+padding:8px;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.carousel {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #e6f1ff; /* Light blue background for the project cards */
+    padding: 2rem;
+    border-radius: 10px;
+    width: 28%;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #0056b3;
+}
+
+.project-card p {
+    font-size: 1rem;
+    color: #555;
 }
 
 footer {
@@ -678,6 +736,12 @@ footer {
 }
 
 
+
+@media (min-width: 1400px) {
+.links{
+    margin-top: 100px;
+}
+}
 
 /* Responsive Behavior: Disappearing Items */
 @media (max-width: 1350px) {
